@@ -158,6 +158,8 @@ Anda dapat memeriksa status antrian Anda dengan memberi perintah berikut pada **
 squeue --me
 ```
 
+Perintah lainnya yang disedikaan SLUM dapat anda baca di [https://slurm.schedmd.com/quickstart.html](**SINI**).
+
 </div>
 
 <br>
