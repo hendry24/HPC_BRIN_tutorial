@@ -94,7 +94,7 @@ Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat 
 
 <br>
 <div align="center">
-<img src="https://i.ibb.co/n3zd5YL/Screenshot-2024-03-25-193007.png" width="40%">
+<img src="https://i.ibb.co/n3zd5YL/Screenshot-2024-03-25-193007.png" width="60%">
 </div>
 <br>
 
