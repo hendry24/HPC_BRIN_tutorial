@@ -26,9 +26,11 @@ Setelah mendaftarkan diri mengikuti arahan tersebut dan status layanan Anda suda
 
 </div>
 
+<br>
 <div align="center">
 <img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "90%">
 </div>
+<br>
 
 <div align = "justify">
   
@@ -42,9 +44,11 @@ Jika berhasil, maka Anda seharusnya melihat
 
 </div>
 
+<br>
 <div align="center">
 <img src="https://i.ibb.co/zXG93jF/Screenshot-2024-03-25-164629.png" width="50%">
 </div>
+<br>
 
 <div align = "justify">
   
@@ -56,9 +60,11 @@ Ini menunjukkan bahwa Anda sudah berhasil menyambungkan komputer Anda ke sistem 
 
 Mulai dari sini kita asumsikan Terminal yang Anda gunakan menggunakan [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (contoh: [**Ubuntu**](https://ubuntu.com/download)). Secara umum, skema hubungan komputer Anda dan komputer pada sistem HPC BRIN adalah sebagai berikut.
 
+<br>
 <div align="center">
 <img src="https://i.ibb.co/6PTjYLh/Screenshot-2024-03-25-190915.png" width="90%">
 </div>
+<br>
 
 Mari kita lihat bagian kiri bawah bagan ini. Yang dimaksud dengan "masuk ke dalam sistem HPC", seperti yang dijelaskan pada bagian sebelumnya, adalah menghubungkan Terminal komputer Anda dengan **LOGIN NODE** dari HPC. Anggaplah seperti ada satu komputer khusus dalam sistem HPC yang dapat Anda kendalikan dari jarak jauh dengan sambungan yang sudah Anda buat. 
 
@@ -83,5 +89,15 @@ Dalam moda **INTERACTIVE**, Anda membawa Terminal Anda lebih jauh ke dalam siste
 Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat menjalankan perintah berikut pada **LOGIN NODE**:
 
 ``srun --partition=interactive --pty /bin/bash``
+
+</div>
+
+<br>
+<div align="center">
+<img src="https://i.ibb.co/n3zd5YL/Screenshot-2024-03-25-193007.png" width="40%">
+</div>
+<br>
+
+<div align="justify">
 
 </div>
