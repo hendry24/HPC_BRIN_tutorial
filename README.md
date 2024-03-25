@@ -78,4 +78,6 @@ Ada dua cara untuk melakukan perhitungan pada HPC.
 
 ## Bekerja pada Interactive Compute Node <a name="section3"></a>
 
+Dalam moda INTERACTIVE, Anda membawa Terminal Anda lebih jauh ke dalam sistem HPC dan mengendalikan INTERACTIVE COMPUTE MODE melalui terminal Anda. Anggaplah Anda mengendalikan sebuah komputer perhitungan dari jauh, dengan komputer LOGIN NODE, yang juga Anda kendalikan dari jauh.
+
 </div>
