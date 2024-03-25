@@ -91,7 +91,7 @@ Ada dua cara untuk melakukan perhitungan pada HPC.
 
 Dalam moda **INTERACTIVE**, Anda membawa Terminal Anda lebih jauh ke dalam sistem HPC dan mengendalikan **INTERACTIVE COMPUTE NODE** melalui Terminal Anda. Anggaplah Anda mengendalikan sebuah komputer perhitungan dari jauh, dengan komputer **LOGIN NODE**, yang juga Anda kendalikan dari jauh.
 
-Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat menjalankan perintah berikut pada **LOGIN NODE**:
+Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE NODE**, Anda dapat menjalankan perintah berikut pada **LOGIN NODE**:
 
 ```
 srun --partition=interactive --pty /bin/bash
@@ -115,7 +115,7 @@ Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **IN
 
 ## **Bekerja dengan Batch Compute Mode**<a name="section4"></a>
 
-Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE MODE** sangat berguna bagi Anda. Berbeda dengan moda **INTERACTIVE**, dengan moda **BATCH** Anda hanya mengirimkan tugas dari **LOGIN NODE** kepada **BATCH COMPUTE NODE** untuk dikerjakan. Komputer perhitungan jenis ini tidak peduli dengan apa yang Anda lakukan di **LOGIN NODE**, jadi Anda dapat menutup sambungan Anda ke **LOGIN NODE** tanpa menganggu perhitungan.
+Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE NODE** sangat berguna bagi Anda. Berbeda dengan moda **INTERACTIVE**, dengan moda **BATCH** Anda hanya mengirimkan tugas dari **LOGIN NODE** kepada **BATCH COMPUTE NODE** untuk dikerjakan. Komputer perhitungan jenis ini tidak peduli dengan apa yang Anda lakukan di **LOGIN NODE**, jadi Anda dapat menutup sambungan Anda ke **LOGIN NODE** tanpa menganggu perhitungan.
 
 Dengan **BATCH COMPUTE NODE**, Anda harus meminta "jatah berhitung" kepada sistem HPC melalui SLURM dengan perintah ``sbatch``. Ini mencakup jumlah CPU yang ingin Anda gunakan, dan berapa lama ingin menggunakannya. Secara umum, Anda dapat mengirimkan sebuah *bash shell script file* (dengan ekstensi ``.sh``) yang dituliskan dengan format berikut:
 
@@ -150,9 +150,9 @@ Mari kita lihat apa saja perintah yang diberikan di dalam file ``.sh`` di atas:
 - ``#SBATCH --output`` mengatur file di mana output standar Anda ditulis. Anda tidak dapat melihat Terminal dari ``BATCH COMPUTE NODE``. Sebagai gantinya, apa yang seharusnya ditulis di Terminal dituliskan pada file ini. Secara bawaan, nilai perintah ini adalah ``slurm-%j.out`` di mana ``%j`` digantikan oleh ``JOBID`` (dijelaskan di bawah). Sebagai catatan, untuk file ``python`` ada permasalahan di mana file ini tidak ditulis sebagaimana mestinya dengan perintah bawaan, sehingga sebaiknya Anda memberi perintah secara khusus. Jika Anda tidak ingin ada file yang dibuat, masukkan ``#SBATCH --output=/dev/null``.
 - ``ulimit -l unlimited`` memberi tahu sistem HPC untuk tidak membatasi memori yang dapat Anda gunakan.
 
-Dengan semua perintah di atas, SLURM akan menandai sebagian dari **BATCH COMPUTE MODE** untuk digunakan oleh Anda dan hanya Anda selama periode penggunaan yang Anda minta. Dengan kata lain, Anda tidak akan berbagi CPU dengan pengguna lain dalam perhitungan Anda. 
+Dengan semua perintah di atas, SLURM akan menandai sebagian dari **BATCH COMPUTE NODE** untuk digunakan oleh Anda dan hanya Anda selama periode penggunaan yang Anda minta. Dengan kata lain, Anda tidak akan berbagi CPU dengan pengguna lain dalam perhitungan Anda. 
 
-Semua perintah ``sbatch [Nama].sh`` yang Anda berikan akan dimasukkan SLURM ke dalam antrian. Jika ada jatah yang kosong dan giliran Anda tiba, maka HPC akan mengalokasikan sebagian **BATCH COMPUTE MODE** yang Anda minta untuk mengerjakan tugas yang Anda kirimkan. 
+Semua perintah ``sbatch [Nama].sh`` yang Anda berikan akan dimasukkan SLURM ke dalam antrian. Jika ada jatah yang kosong dan giliran Anda tiba, maka HPC akan mengalokasikan sebagian **BATCH COMPUTE NODE** yang Anda minta untuk mengerjakan tugas yang Anda kirimkan. 
 
 Anda dapat memeriksa status antrian Anda dengan memberi perintah berikut pada **LOGIN NODE**
 
