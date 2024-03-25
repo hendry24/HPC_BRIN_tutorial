@@ -56,7 +56,9 @@ Jika Anda menjalankan perhitungan di **LOGIN NODE**, tidak akan lama sebelum per
 - Mengurus file.
 - Menghubungkan komputer Anda ke **INTERACTIVE COMPUTE NODE** atau mengirim pekerjaan ke **BATCH COMPUTE NODE**.
 
-Berangkat dari sini, mari kita lihat bagan di atas secara menyeluruh. Tujuan utama menggunakan HPC adalah untuk melakukan perhitungan yang memakan sumber daya, yang akan memakan waktu lama dan membebani perangkat keras komputer Anda, secara lebih cepat. [**SLURM**](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) adalah
+Berangkat dari sini, mari kita lihat bagan di atas secara menyeluruh. Tujuan utama menggunakan HPC adalah untuk melakukan perhitungan yang memakan sumber daya, yang akan memakan waktu lama dan membebani perangkat keras komputer Anda, secara lebih cepat. [**SLURM**](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) adalah sistem manajemen sumber daya yang digunakan oleh HPC. SLURM mengurus permintaan Anda kepada sistem HPC untuk melakukan perhitungan tertentu.
+
+Anda mengendalikan **LOGIN NODE** dengan komputer Anda. Sekarang, bagaimana jika Anda ingin melakukan perhitungan 
 
 </div>
 
