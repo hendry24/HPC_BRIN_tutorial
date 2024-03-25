@@ -127,5 +127,9 @@ ulimit -l  unlimited
 
 ```
 
+Simpan file ini dengan ekstensi ``.sh``. Kemudian, Anda dapat mengajukan pekerjaan Anda dengan menjalankan perintah
+
+``sbatch [Nama].sh``
+
 
 </div>
