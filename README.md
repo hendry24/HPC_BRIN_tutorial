@@ -76,7 +76,7 @@ Mari kita lihat bagian kiri bawah bagan ini. Yang dimaksud dengan "masuk ke dala
 Jika Anda menjalankan perhitungan di **LOGIN NODE**, tidak akan lama sebelum perhitungan Anda dihentikan paksa oleh sistem HPC. Walaupun kesannya seperti tidak mengapa melakukan perhitungan yang cepat, sebaiknya Anda tidak melakukan hal ini karena mengganggu kerja sistem HPC. **LOGIN NODE** hanya sebatas tempat Anda melakukan hal-hal berikut:
 
 - Memanggil modul-modul yang disediakan HPC untuk digunakan dalam perhitungan (misalnya ``Anaconda``) dan melakukan berbagai pengaturan dengan modul-modul tersebut (misalnya menggunakan Anaconda untuk memasang modul ``scikit-learn``).
-- Mengurus file.
+- Mengurus file. Jangan lupa menyimpan semua file Anda di dalam folder ``_scratch`` untuk mendapat akses memori HPC.
 - Menghubungkan komputer Anda ke **INTERACTIVE COMPUTE NODE** atau mengirim pekerjaan ke **BATCH COMPUTE NODE**.
 
 Berangkat dari sini, mari kita lihat bagan di atas secara menyeluruh. Tujuan utama menggunakan HPC adalah untuk melakukan perhitungan yang memakan sumber daya, yang akan memakan waktu lama dan membebani perangkat keras komputer Anda, secara lebih cepat. [**SLURM**](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) adalah sistem manajemen sumber daya yang digunakan oleh HPC. SLURM mengurus permintaan Anda kepada sistem HPC untuk melakukan perhitungan tertentu pada **COMPUTE NODE**, yakni komputer pada sistem HPC yang memang ditujukan untuk melakukan perhitungan. 
@@ -148,10 +148,16 @@ Mari kita lihat apa saja perintah yang diberikan di dalam file ``.sh`` di atas:
 
 Dengan semua perintah di atas, SLURM akan menandai sebagian dari **BATCH COMPUTE MODE** untuk digunakan oleh Anda dan hanya Anda selama periode penggunaan yang Anda minta. Dengan kata lain, Anda tidak akan berbagi CPU dengan pengguna lain dalam perhitungan Anda. 
 
-Semua perintah ``sbatch [Nama].sh`` yang Anda berikan akan dimasukkan SLURM ke dalam antrian. Jika ada jatah yang kosong dan giliran Anda tiba, maka HPC akan mengalokasikan sebagian **BATCH COMPUTE MODE** yang Anda minta untuk mengerjakan tugas yang Anda kirimkan. Anda dapat memeriksa antrian Anda dengan memberi perintah berikut pada **LOGIN NODE**
+Semua perintah ``sbatch [Nama].sh`` yang Anda berikan akan dimasukkan SLURM ke dalam antrian. Jika ada jatah yang kosong dan giliran Anda tiba, maka HPC akan mengalokasikan sebagian **BATCH COMPUTE MODE** yang Anda minta untuk mengerjakan tugas yang Anda kirimkan. 
+
+Tidak ada apapun yang muncul di layar Anda ketika permintaan Anda dikumpulkan. Anda dapat memeriksa status antrian Anda dengan memberi perintah berikut pada **LOGIN NODE**
 
 ```
 squeue --me
 ```
 
 </div>
+
+<br>
+<div align="center">
+<img src="https://i.ibb.co/Xk1QXWT/Screenshot-2024-03-25-201333.png" width = "60%">
