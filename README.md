@@ -80,6 +80,8 @@ Ada dua cara untuk melakukan perhitungan pada HPC.
 
 Dalam moda **INTERACTIVE**, Anda membawa Terminal Anda lebih jauh ke dalam sistem HPC dan mengendalikan **INTERACTIVE COMPUTE MODE** melalui Terminal Anda. Anggaplah Anda mengendalikan sebuah komputer perhitungan dari jauh, dengan komputer **LOGIN NODE**, yang juga Anda kendalikan dari jauh.
 
-Berbeda dengan **LOGIN NODE**, saat menyambungkan komputer Anda pada **INTERACTIVE COMPUTE MODE**, Anda harus meminta "jatah berhitung" pada HPC melalui SLURM. 
+Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat menjalankan perintah berikut pada **LOGIN NODE**:
+
+``srun --partition=interactive --pty /bin/bash``
 
 </div>
