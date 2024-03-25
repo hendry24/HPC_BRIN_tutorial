@@ -137,5 +137,21 @@ Simpan file ini dengan ekstensi ``.sh``. Kemudian, Anda dapat mengajukan pekerja
 sbatch [Nama].sh
 ```
 
+Mari kita lihat apa saja perintah yang diberikan di dalam file ``.sh`` di atas:
+
+- ``!/bin/bash`` memberi tahu **BATCH COMPUTE NODE** untuk menjalankan file ini dengan ``bash``.
+- ``#SBATCH --job-name`` mengatur nama pekerjaan Anda yang nantinya akan muncul dalam antrian. Ini berguna sebagai tanda pengenal dan Anda dapat sebebasnya memberikan nama.
+- ``#SBATCH --partition`` mengatur seberapa lama sejumlah CPU pada **BATCH COMPUTE NODE** digunakan oleh Anda. Di sini ``short`` memberi Anda jatah 1x24 jam, sementara ``medium-short`` memberi Anda jatah 3x24 jam. Pastikan memilih waktu yang cukup. Jika waktu Anda habis, maka perhitungan Anda akan diberhentikan oleh HPC dan hasil yang tidak tersimpan akan hilang.
+- ``#SBATCH --ntasks`` memberi tahu **BATCH COMPUTE NODE** berapa banyak pekerjaan yang akan dikerjakan dan mengatur alokasi CPU untuk menjalankan semua tugas yang ada. Sebaiknya, perintah ini tidak diganggu.
+- ``#SBATCH --cpus-per-task`` mengatur seberapa banyak CPU yang Anda ingin gunakan per pekerjaan. Dengan nilai bawaan ``#SBATCH --ntasks=1``, perintah ini memberi tahu ``BATCH COMPUTE NODE`` jumlah CPU yang dikerahkan untuk satu-satunya pekerjaan Anda.
+- ``ulimit -l unlimited`` memberi tahu sistem HPC untuk tidak membatasi memori yang dapat Anda gunakan.
+
+Dengan semua perintah di atas, SLURM akan menandai sebagian dari **BATCH COMPUTE MODE** untuk digunakan oleh Anda dan hanya Anda selama periode penggunaan yang Anda minta. Dengan kata lain, Anda tidak akan berbagi CPU dengan pengguna lain dalam perhitungan Anda. 
+
+Semua perintah ``sbatch [Nama].sh`` yang Anda berikan akan dimasukkan SLURM ke dalam antrian. Jika ada jatah yang kosong dan giliran Anda tiba, maka HPC akan mengalokasikan sebagian **BATCH COMPUTE MODE** yang Anda minta untuk mengerjakan tugas yang Anda kirimkan. Anda dapat memeriksa antrian Anda dengan memberi perintah berikut pada **LOGIN NODE**
+
+```
+squeue --me
+```
 
 </div>
