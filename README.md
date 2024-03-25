@@ -36,7 +36,7 @@ Komputer pribadi Anda dapat terhubung ke sistem HPC melalui sistem [**SSH**](htt
 
 Untuk masuk ke dalam sistem HPC, buka Terminal Anda dan ketik (tanpa kurung kotak) 
 
-``ssh -i [lokasi kunci privat Anda] [USERNAME Anda]@login2.hpc.brin.go.id``
+``ssh [USERNAME Anda]@login2.hpc.brin.go.id``
 
 Jika berhasil, maka Anda seharusnya melihat
 
