@@ -1,4 +1,4 @@
-# **Menggunakan Layanan MAHAMERU HPC**
+# **Menggunakan Layanan MAHAMERU HPC BRIN**
 
 <div align = "justify">
   
