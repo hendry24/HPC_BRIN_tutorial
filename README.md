@@ -150,7 +150,7 @@ Dengan semua perintah di atas, SLURM akan menandai sebagian dari **BATCH COMPUTE
 
 Semua perintah ``sbatch [Nama].sh`` yang Anda berikan akan dimasukkan SLURM ke dalam antrian. Jika ada jatah yang kosong dan giliran Anda tiba, maka HPC akan mengalokasikan sebagian **BATCH COMPUTE MODE** yang Anda minta untuk mengerjakan tugas yang Anda kirimkan. 
 
-Tidak ada apapun yang muncul di layar Anda ketika permintaan Anda dikumpulkan. Anda dapat memeriksa status antrian Anda dengan memberi perintah berikut pada **LOGIN NODE**
+Anda dapat memeriksa status antrian Anda dengan memberi perintah berikut pada **LOGIN NODE**
 
 ```
 squeue --me
@@ -166,6 +166,6 @@ squeue --me
 
 <div align="justify">
 
-
+Pada gambar di atas 
 
 </div>
