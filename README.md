@@ -1,3 +1,7 @@
+<div align = "center">
+<img src="https://i.ibb.co/dDr2KpR/Screenshot-2024-03-25-185451.png" width = "70%">
+</div>
+
 # **Menggunakan Layanan MAHAMERU HPC BRIN**
 
 <div align = "justify">
