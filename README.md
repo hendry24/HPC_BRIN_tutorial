@@ -34,7 +34,11 @@ Setelah mendaftarkan diri mengikuti arahan tersebut dan status layanan Anda suda
   
 Komputer pribadi Anda dapat terhubung ke sistem HPC melalui sistem [**SSH**](https://www.cloudflare.com/learning/access-management/what-is-ssh/) dengan kunci yang Anda gunakan saat pendaftaran layanan. Oleh karena itu, sebaiknya Anda menggunakan Terminal yang sama dengan yang Anda gunakan untuk membuat kunci privat (dengan perintah ``ssh-keygen``) yang didaftarkan ke ELSA.
 
-Untuk masuk ke dalam sistem HPC, buka Terminal Anda dan ketik (tanpa kurung kotak) ``ssh -i [lokasi kunci privat Anda] [USERNAME Anda]@login2.hpc.brin.go.id``. Jika berhasil, maka Anda seharusnya melihat
+Untuk masuk ke dalam sistem HPC, buka Terminal Anda dan ketik (tanpa kurung kotak) 
+
+``ssh -i [lokasi kunci privat Anda] [USERNAME Anda]@login2.hpc.brin.go.id``
+
+Jika berhasil, maka Anda seharusnya melihat
 
 </div>
 
