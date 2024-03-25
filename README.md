@@ -160,4 +160,12 @@ squeue --me
 
 <br>
 <div align="center">
-<img src="https://i.ibb.co/Xk1QXWT/Screenshot-2024-03-25-201333.png" width = "60%">
+<img src="https://i.ibb.co/jRggmgw/Screenshot-2024-03-25-202832.png" width = "60%">
+</div>
+<br>
+
+<div align="justify">
+
+
+
+</div>
