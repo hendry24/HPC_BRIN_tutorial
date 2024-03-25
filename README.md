@@ -113,7 +113,7 @@ Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **IN
 
 ---
 
-## **Bekerja dengan Batch Compute Mode**<a name="section4"></a>
+## **Bekerja dengan Batch Compute Node**<a name="section4"></a>
 
 Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE NODE** sangat berguna bagi Anda. Berbeda dengan moda **INTERACTIVE**, dengan moda **BATCH** Anda hanya mengirimkan tugas dari **LOGIN NODE** kepada **BATCH COMPUTE NODE** untuk dikerjakan. Komputer perhitungan jenis ini tidak peduli dengan apa yang Anda lakukan di **LOGIN NODE**, jadi Anda dapat menutup sambungan Anda ke **LOGIN NODE** tanpa menganggu perhitungan.
 
