@@ -4,9 +4,14 @@
   
 BRIN menyediakan layanan menggunakan komputasi performa tinggi (*high performance computing*/HPC) yang dapat Anda akses dari komputer pribadi Anda. Halaman ini dimaksudkan untuk menuntun Anda tentang penggunaan layanan ini secara komprehensif. Harapannya, Anda mengerti dasar-dasar cara kerja HPC dan cara untuk mengoperasikannya sebagai pengguna awam. 
 
+## **DAFTAR ISI**
+
+- [Bagaimana Saya Dapat Mengakses HPC?](#section1)
+- [Komunikasi Anda dan Sistem HPC](#section2)
+
 ---
 
-## **Bagaimana Saya Dapat Mengakses HPC?**
+## **Bagaimana Saya Dapat Mengakses HPC?**<a name="section1"></a>
 
 Langkah pertama yang harus Anda lakukan adalah mendaftarkan diri sebagai pengguna layanan HPC melalui laman ELSA BRIN. Panduan lengkapnya dapat Anda temukan di [**SINI**](https://elsa.brin.go.id/faq).
 
@@ -38,7 +43,7 @@ Ini menunjukkan bahwa Anda sudah berhasil masuk ke dalam HPC BRIN.
 
 ---
 
-## **Komunikasi Anda dan Sistem HPC**
+## **Komunikasi Anda dan Sistem HPC**<a name="section2"></a>
 
 Mulai dari sini kita asumsikan Terminal yang Anda gunakan menggunakan [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (contoh: [**Ubuntu**](https://ubuntu.com/download)). Secara umum, skema hubungan komputer Anda dan komputer pada sistem HPC BRIN adalah sebagai berikut.
 
