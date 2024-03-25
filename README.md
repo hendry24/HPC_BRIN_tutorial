@@ -4,6 +4,8 @@
 
 # **Menggunakan Layanan MAHAMERU HPC BRIN**
 
+oleh: Hendry dan Albert Andersen. Pusat Riset Fisika Kuantum (PRFK). Badan Riset dan Inovasi Nasional (BRIN).
+
 <div align = "justify">
   
 BRIN menyediakan layanan menggunakan komputasi performa tinggi (*high performance computing*/HPC) yang dapat Anda akses dari komputer pribadi Anda. Halaman ini dimaksudkan untuk menuntun Anda tentang penggunaan layanan ini secara komprehensif. Harapannya, Anda mengerti dasar-dasar cara kerja HPC dan cara untuk mengoperasikannya sebagai pengguna awam. 
