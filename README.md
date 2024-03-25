@@ -39,7 +39,9 @@ Komputer pribadi Anda dapat terhubung ke sistem HPC melalui sistem [**SSH**](htt
 
 Untuk masuk ke dalam sistem HPC, buka Terminal Anda dan ketik (tanpa kurung kotak) 
 
-``ssh [USERNAME Anda]@login2.hpc.brin.go.id``
+```
+ssh [USERNAME Anda]@login2.hpc.brin.go.id
+```
 
 Jika berhasil, maka Anda seharusnya melihat
 
@@ -89,7 +91,9 @@ Dalam moda **INTERACTIVE**, Anda membawa Terminal Anda lebih jauh ke dalam siste
 
 Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat menjalankan perintah berikut pada **LOGIN NODE**:
 
-``srun --partition=interactive --pty /bin/bash``
+```
+srun --partition=interactive --pty /bin/bash
+```
 
 </div>
 
@@ -129,7 +133,9 @@ ulimit -l  unlimited
 
 Simpan file ini dengan ekstensi ``.sh``. Kemudian, Anda dapat mengajukan pekerjaan Anda dengan menjalankan perintah
 
-``sbatch [Nama].sh``
+```
+sbatch [Nama].sh
+```
 
 
 </div>
