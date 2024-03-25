@@ -1,1 +1,46 @@
-# HPC_BRIN_tutorial
+### **Menggunakan Layanan MAHAMERU HPC**
+
+---
+
+---
+
+BRIN menyediakan layanan menggunakan komputasi performa tinggi (_high performance computing_/HPC) yang dapat Anda akses dari komputer pribadi Anda. Halaman ini dimaksudkan untuk menuntun Anda tentang penggunaan layanan ini secara komprehensif. Harapannya, Anda mengerti dasar-dasar cara kerja HPC dan cara untuk mengoperasikannya sebagai pengguna awam. 
+
+#### **Bagaimana Saya Dapat Mengakses HPC?**
+
+Langkah pertama yang harus Anda lakukan adalah mendaftarkan diri sebagai pengguna layanan HPC melalui laman ELSA BRIN. Panduan lengkapnya dapat Anda temukan di [**SINI**](https://elsa.brin.go.id/faq).
+
+Setelah mendaftarkan diri mengikuti arahan tersebut dan status layanan Anda sudah aktif, Anda harus menyimpan informasi berikut yang dapat diperoleh di bagian **Profil > Transaksi > [Nama Layanan HPC]**:
+
+- **USERNAME** yang dapat dilihat pada Tab **Akun**. 
+
+<img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "50%">
+
+Komputer pribadi Anda dapat terhubung ke sistem HPC melalui sistem [**SSH**](https://www.cloudflare.com/learning/access-management/what-is-ssh/) dengan kunci yang Anda gunakan saat pendaftaran layanan. Oleh karena itu, sebaiknya Anda menggunakan Terminal yang sama dengan yang Anda gunakan untuk membuat kunci privat (dengan perintah ``ssh-keygen``) yang didaftarkan ke ELSA.
+
+Untuk masuk ke dalam sistem HPC, buka Terminal Anda dan ketik (tanpa kurung kotak) ``ssh -i [lokasi kunci privat Anda] [USERNAME Anda]@login2.hpc.brin.go.id``. Jika berhasil, maka Anda seharusnya melihat
+
+<img src="https://i.ibb.co/zXG93jF/Screenshot-2024-03-25-164629.png" width="30%">
+
+Ini menunjukkan bahwa Anda sudah berhasil masuk ke dalam HPC BRIN. 
+
+---
+
+#### **Komunikasi Anda dan Sistem HPC**
+
+Mulai dari sini kita asumsikan Terminal yang Anda gunakan menggunakan [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (contoh: [**Ubuntu**](https://ubuntu.com/download)). Secara umum, skema hubungan komputer Anda dan komputer pada sistem HPC BRIN adalah sebagai berikut.
+
+<img src="https://i.ibb.co/C9DXNp4/Screenshot-2024-03-25-175852.png" width="70%">
+
+Mari kita lihat bagian kiri bawah bagan ini. Yang dimaksud dengan "masuk ke dalam sistem HPC", seperti yang dijelaskan pada bagian sebelumnya, adalah menghubungkan Terminal komputer Anda dengan **LOGIN NODE** dari HPC. Anggaplah seperti ada satu komputer khusus dalam sistem HPC yang dapat Anda kendalikan dari jarak jauh dengan sambungan yang sudah Anda buat. 
+
+**Anda TIDAK DIIZINKAN untuk menjalankan perhitungan di LOGIN NODE**
+
+Jika Anda menjalankan perhitungan di **LOGIN NODE**, tidak akan lama sebelum perhitungan Anda dihentikan paksa oleh sistem HPC. Walaupun kesannya seperti tidak mengapa melakukan perhitungan yang cepat, sebaiknya Anda tidak melakukan hal ini karena mengganggu kerja sistem HPC. **LOGIN NODE** hanya sebatas tempat Anda melakukan hal-hal berikut:
+
+- Memanggil modul-modul yang disediakan HPC untuk digunakan dalam perhitungan (misalnya ``Anaconda``) dan melakukan berbagai pengaturan dengan modul-modul tersebut (misalnya menggunakan Anaconda untuk memasang modul ``scikit-learn``).
+- Mengurus file.
+- Menghubungkan komputer Anda ke **INTERACTIVE COMPUTE NODE** atau mengirim pekerjaan ke **BATCH COMPUTE NODE**.
+
+Berangkat dari sini, mari kita lihat bagan di atas secara menyeluruh. Tujuan utama menggunakan HPC adalah untuk melakukan perhitungan yang memakan sumber daya, yang akan memakan waktu lama dan membebani perangkat keras komputer Anda, secara lebih cepat. [**SLURM**](https://en.wikipedia.org/wiki/Slurm_Workload_Manager) adalah
+
