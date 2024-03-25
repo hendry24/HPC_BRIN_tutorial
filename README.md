@@ -52,7 +52,7 @@ Jika berhasil, maka Anda seharusnya melihat
 
 <div align = "justify">
   
-Ini menunjukkan bahwa Anda sudah berhasil menyambungkan komputer Anda ke sistem HPC. 
+Ini menunjukkan bahwa Anda sudah berhasil menyambungkan komputer Anda ke sistem HPC. Untuk memutus sambungan, masukkan perintah ``exit``.
 
 ---
 
@@ -99,5 +99,8 @@ Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat 
 <br>
 
 <div align="justify">
+
+Gambar di atas menunjukkan apa yang seharusnya Anda lihat ketika berhasil tersambung pada **INTERACTIVE COMPUTE MODE**. Anda akan berpindah dari **LOGIN NODE** (``trembesi02`` pada gambar) ke **INTERACTIVE COMPUTE MODE** (``trembesi91`` pada gambar). Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **INTERACTIVE COMPUTE MODE** dan kembali ke **LOGIN NODE**. 
+Di dalam **INTERACTIVE COMPUTE MODE** Anda dapat sebebasnya melakukan perhitungan, selama mematuhi batasan yang berlaku (misalnya jumlah CPU yang digunakan).
 
 </div>
