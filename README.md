@@ -4,7 +4,7 @@
 
 # **Menggunakan Layanan MAHAMERU HPC BRIN**
 
-oleh: Hendry dan Albert Andersen. Pusat Riset Fisika Kuantum (PRFK). Badan Riset dan Inovasi Nasional (BRIN).
+**_Hendry & Albert Andersen. Pusat Riset Fisika Kuantum (PRFK). Badan Riset dan Inovasi Nasional (BRIN)._**
 
 <div align = "justify">
   
