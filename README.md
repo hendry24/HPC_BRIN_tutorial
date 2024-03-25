@@ -4,7 +4,7 @@
   
 BRIN menyediakan layanan menggunakan komputasi performa tinggi (*high performance computing*/HPC) yang dapat Anda akses dari komputer pribadi Anda. Halaman ini dimaksudkan untuk menuntun Anda tentang penggunaan layanan ini secara komprehensif. Harapannya, Anda mengerti dasar-dasar cara kerja HPC dan cara untuk mengoperasikannya sebagai pengguna awam. 
 
-## **DAFTAR ISI**
+### **DAFTAR ISI**
 
 - [Bagaimana Saya Dapat Mengakses HPC?](#section1)
 - [Komunikasi Anda dan Sistem HPC](#section2)
