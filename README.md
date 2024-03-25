@@ -100,7 +100,8 @@ Untuk menyambungkan Terminal Anda pada **INTERACTIVE COMPUTE MODE**, Anda dapat 
 
 <div align="justify">
 
-Gambar di atas menunjukkan apa yang seharusnya Anda lihat ketika berhasil tersambung pada **INTERACTIVE COMPUTE MODE**. Anda akan berpindah dari **LOGIN NODE** (``trembesi02`` pada gambar) ke **INTERACTIVE COMPUTE MODE** (``trembesi91`` pada gambar). Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **INTERACTIVE COMPUTE MODE** dan kembali ke **LOGIN NODE**. 
-Di dalam **INTERACTIVE COMPUTE MODE** Anda dapat sebebasnya melakukan perhitungan, selama mematuhi batasan yang berlaku (misalnya jumlah CPU yang digunakan).
+Gambar di atas menunjukkan apa yang seharusnya Anda lihat ketika berhasil tersambung pada **INTERACTIVE COMPUTE MODE**. Anda akan berpindah dari **LOGIN NODE** (``trembesi02`` pada gambar) ke **INTERACTIVE COMPUTE MODE** (``trembesi91`` pada gambar). Di dalam **INTERACTIVE COMPUTE MODE** Anda dapat sebebasnya melakukan perhitungan, selama mematuhi batasan yang berlaku (misalnya jumlah CPU yang digunakan).
+
+Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **INTERACTIVE COMPUTE MODE** dan kembali ke **LOGIN NODE**. Jika Anda menutup Terminal, maka semua sambungan ke sistem HPC akan diputus dan perhitungan yang sedang berlangsung pada **INTERACTIVE COMPUTE MODE** akan dihentikan.
 
 </div>
