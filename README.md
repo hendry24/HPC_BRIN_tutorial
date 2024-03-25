@@ -109,5 +109,23 @@ Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **IN
 
 ## **Bekerja dengan Batch Compute Mode**<a name="section4"></a>
 
-Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE MODE** sangat berguna bagi Anda.
+Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE MODE** sangat berguna bagi Anda. Berbeda dengan moda **INTERACTIVE**, dengan moda **BATCH** Anda hanya mengirimkan tugas dari **LOGIN NODE** kepada **BATCH COMPUTE NODE** untuk dikerjakan. Komputer perhitungan jenis ini tidak peduli dengan apa yang Anda lakukan di **LOGIN NODE**, jadi Anda dapat menutup sambungan Anda ke **LOGIN NODE** tanpa menganggu perhitungan.
+
+Dengan **BATCH COMPUTE MODE**, Anda harus meminta "jatah berhitung" kepada sistem HPC melalui SLURM dengan perintah ``sbatch``. Ini mencakup jumlah CPU yang ingin Anda gunakan, dan berapa lama ingin menggunakannya. Secara umum, Anda dapat mengirimkan sebuah *bash shell script file* (dengan ekstensi ``.sh``) yang dituliskan dengan format berikut:
+
+```
+!/bin/bash
+
+#SBATCH --job-name = [Nama pekerjaan Anda sebagai pengenal]
+#SBATCH --partition = [Pilih antara short atau medium-short]
+#SBATCH --ntasks = 1
+#SBATCH --cpus-per-task = [Masukkan jumlah CPU yang ingin Anda gunakan. Pastikan tidak melewati batas (biasanya 64)]
+
+ulimit -l  unlimited
+
+[Masukkan rangkaian perintah untuk pekerjaan Anda di sini]
+
+```
+
+
 </div>
