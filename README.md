@@ -14,13 +14,17 @@ Setelah mendaftarkan diri mengikuti arahan tersebut dan status layanan Anda suda
 
 - **USERNAME** yang dapat dilihat pada Tab **Akun**. 
 
-<img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "50%">
+<div align="center">
+<img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "70%">
+</div>
 
 Komputer pribadi Anda dapat terhubung ke sistem HPC melalui sistem [**SSH**](https://www.cloudflare.com/learning/access-management/what-is-ssh/) dengan kunci yang Anda gunakan saat pendaftaran layanan. Oleh karena itu, sebaiknya Anda menggunakan Terminal yang sama dengan yang Anda gunakan untuk membuat kunci privat (dengan perintah ``ssh-keygen``) yang didaftarkan ke ELSA.
 
 Untuk masuk ke dalam sistem HPC, buka Terminal Anda dan ketik (tanpa kurung kotak) ``ssh -i [lokasi kunci privat Anda] [USERNAME Anda]@login2.hpc.brin.go.id``. Jika berhasil, maka Anda seharusnya melihat
 
-<img src="https://i.ibb.co/zXG93jF/Screenshot-2024-03-25-164629.png" width="30%">
+<div align="center">
+<img src="https://i.ibb.co/zXG93jF/Screenshot-2024-03-25-164629.png" width="50%">
+</div>
 
 Ini menunjukkan bahwa Anda sudah berhasil masuk ke dalam HPC BRIN. 
 
@@ -30,7 +34,9 @@ Ini menunjukkan bahwa Anda sudah berhasil masuk ke dalam HPC BRIN.
 
 Mulai dari sini kita asumsikan Terminal yang Anda gunakan menggunakan [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (contoh: [**Ubuntu**](https://ubuntu.com/download)). Secara umum, skema hubungan komputer Anda dan komputer pada sistem HPC BRIN adalah sebagai berikut.
 
+<div align="center">
 <img src="https://i.ibb.co/C9DXNp4/Screenshot-2024-03-25-175852.png" width="70%">
+</div>
 
 Mari kita lihat bagian kiri bawah bagan ini. Yang dimaksud dengan "masuk ke dalam sistem HPC", seperti yang dijelaskan pada bagian sebelumnya, adalah menghubungkan Terminal komputer Anda dengan **LOGIN NODE** dari HPC. Anggaplah seperti ada satu komputer khusus dalam sistem HPC yang dapat Anda kendalikan dari jarak jauh dengan sambungan yang sudah Anda buat. 
 
