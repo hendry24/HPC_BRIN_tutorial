@@ -12,7 +12,8 @@ BRIN menyediakan layanan menggunakan komputasi performa tinggi (*high performanc
 
 - [Bagaimana Saya Dapat Mengakses HPC?](#section1)
 - [Komunikasi Anda dan Sistem HPC](#section2)
-- [Bekerja pada Interactive Compute Node](#section3)
+- [Bekerja dengan Interactive Compute Node](#section3)
+- [Bekerja dengan Batch Compute Node](#section4)
 
 ---
 
@@ -82,7 +83,7 @@ Ada dua cara untuk melakukan perhitungan pada HPC.
 
 ---
 
-## Bekerja pada Interactive Compute Node <a name="section3"></a>
+## Bekerja dengan Interactive Compute Node <a name="section3"></a>
 
 Dalam moda **INTERACTIVE**, Anda membawa Terminal Anda lebih jauh ke dalam sistem HPC dan mengendalikan **INTERACTIVE COMPUTE MODE** melalui Terminal Anda. Anggaplah Anda mengendalikan sebuah komputer perhitungan dari jauh, dengan komputer **LOGIN NODE**, yang juga Anda kendalikan dari jauh.
 
@@ -104,4 +105,9 @@ Gambar di atas menunjukkan apa yang seharusnya Anda lihat ketika berhasil tersam
 
 Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **INTERACTIVE COMPUTE MODE** dan kembali ke **LOGIN NODE**. Jika Anda menutup Terminal, maka semua sambungan ke sistem HPC akan diputus dan perhitungan yang sedang berlangsung pada **INTERACTIVE COMPUTE MODE** akan dihentikan.
 
+---
+
+## **Bekerja dengan Batch Compute Mode**<a name="section4"></a>
+
+Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE MODE** sangat berguna bagi Anda.
 </div>
