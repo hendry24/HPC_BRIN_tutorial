@@ -1,5 +1,6 @@
 # **Menggunakan Layanan MAHAMERU HPC**
 
+<div align = "justify">
 BRIN menyediakan layanan menggunakan komputasi performa tinggi (_high performance computing_/HPC) yang dapat Anda akses dari komputer pribadi Anda. Halaman ini dimaksudkan untuk menuntun Anda tentang penggunaan layanan ini secara komprehensif. Harapannya, Anda mengerti dasar-dasar cara kerja HPC dan cara untuk mengoperasikannya sebagai pengguna awam. 
 
 ---
@@ -10,7 +11,9 @@ Langkah pertama yang harus Anda lakukan adalah mendaftarkan diri sebagai penggun
 
 Setelah mendaftarkan diri mengikuti arahan tersebut dan status layanan Anda sudah aktif, Anda harus menyimpan informasi berikut yang dapat diperoleh di bagian **Profil > Transaksi > [Nama Layanan HPC]**:
 
-- **USERNAME** yang dapat dilihat pada Tab **Akun** (diterangi kuning pada gambar berikut).  
+- **USERNAME** yang dapat dilihat pada Tab **Akun** (diterangi kuning pada gambar berikut).
+
+</div>
 
 <div align="center">
 <img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "90%">
