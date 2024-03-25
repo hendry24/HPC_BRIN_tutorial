@@ -166,6 +166,20 @@ squeue --me
 
 <div align="justify">
 
-Pada gambar di atas 
+Pada gambar di atas sebuah pekerjaan dengan nama ``Nama_Pekerjaan`` baru saja diajukan kepada sistem HPC. 
 
+- ``JOBID`` menunjukkan nomor identifikasi untuk perkerjaan tersebut.
+- ``PARTITION`` menunjukkan perintah ``#SBATCH --partition``.
+- ``NAME`` menunjukkan perintah ``#SABTCH --job-name``.
+- ``USER`` menunjukkan **USERNAME** Anda.
+- ``ST`` menunjukkan status antrian Anda. ``R`` berarti pekerjaan Anda sedang dijalankan oleh ``BATCH COMPUTE NODE`` (*running*), sementara ``PD`` berarti antrian Anda masih tertahan (*pending*).
+- ``TIME`` menunjukkan sudah seberapa lama pekerjaan Anda berjalan.
+- ``NODES`` menunjukkan jumlah ``BATCH COMPUTE NODE`` yang digunakan sistem HPC untuk menjalankan pekerjaan Anda.
+- ``NODELIST(REASON)`` menunjukkan ``BATCH COMPUTE NODE`` mana dari HPC yang sedang digunakan untuk menjalankan pekerjaan Anda. Misalnya pekerjaan yang baru saja dikumpulkan pada gambar di atas dijalankan oleh node ``trembesi13``. Jika Anda sedang berada dalam antrian, Anda mungkin akan melihat ``priority`` yang berarti pekerjaan Anda akan segera dijalankan jika jumlah CPU yang Anda minta sudah luang.
+
+Untuk membatalkan sebuah tugas, Anda dapat memberikan perintah
+
+```
+scancel [JOBID pekerjaan yang ingin dibatalkan]
+```
 </div>
