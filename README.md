@@ -10,10 +10,10 @@ Langkah pertama yang harus Anda lakukan adalah mendaftarkan diri sebagai penggun
 
 Setelah mendaftarkan diri mengikuti arahan tersebut dan status layanan Anda sudah aktif, Anda harus menyimpan informasi berikut yang dapat diperoleh di bagian **Profil > Transaksi > [Nama Layanan HPC]**:
 
-- **USERNAME** yang dapat dilihat pada Tab **Akun**. 
+- **USERNAME** yang dapat dilihat pada Tab **Akun** (diterangi kuning pada gambar berikut).  
 
 <div align="center">
-<img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "70%">
+<img src = "https://i.ibb.co/4tZyQjR/Screenshot-2024-03-25-163055.png" width = "90%">
 </div>
 
 Komputer pribadi Anda dapat terhubung ke sistem HPC melalui sistem [**SSH**](https://www.cloudflare.com/learning/access-management/what-is-ssh/) dengan kunci yang Anda gunakan saat pendaftaran layanan. Oleh karena itu, sebaiknya Anda menggunakan Terminal yang sama dengan yang Anda gunakan untuk membuat kunci privat (dengan perintah ``ssh-keygen``) yang didaftarkan ke ELSA.
