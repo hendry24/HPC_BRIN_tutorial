@@ -48,7 +48,7 @@ Jika berhasil, maka Anda seharusnya melihat
 
 <div align = "justify">
   
-Ini menunjukkan bahwa Anda sudah berhasil masuk ke dalam HPC BRIN. 
+Ini menunjukkan bahwa Anda sudah berhasil menyambungkan komputer Anda ke sistem HPC. 
 
 ---
 
