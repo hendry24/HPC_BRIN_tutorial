@@ -180,10 +180,13 @@ Pada gambar di atas sebuah pekerjaan dengan nama ``Nama_Pekerjaan`` baru saja di
 - ``NODELIST(REASON)`` menunjukkan ``BATCH COMPUTE NODE`` mana dari HPC yang sedang digunakan untuk menjalankan pekerjaan Anda. Misalnya pekerjaan yang baru saja dikumpulkan pada gambar di atas dijalankan oleh node ``trembesi13``. Jika Anda sedang berada dalam antrian, Anda mungkin akan melihat ``priority`` yang berarti pekerjaan Anda akan segera dijalankan jika jumlah CPU yang Anda minta sudah luang.
 
 Untuk membatalkan sebuah tugas, Anda dapat memberikan perintah
-
 ```
 scancel [JOBID pekerjaan yang ingin dibatalkan]
 ```
 
+Untuk melihat histori tugas yang pernah Anda kumpulkan, berikan perintah
+```
+sacct
+```
 
 </div>
