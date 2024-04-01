@@ -126,7 +126,6 @@ Dengan **BATCH COMPUTE NODE**, Anda harus meminta "jatah berhitung" kepada siste
 #SBATCH --partition = [Pilih antara short atau medium-short]
 #SBATCH --ntasks = 1
 #SBATCH --cpus-per-task = [Masukkan jumlah CPU yang ingin Anda gunakan. Pastikan tidak melewati batas (biasanya 64)]
-#SBATCH --output = [Masukkan nama file output yang Anda inginkan]
 
 ulimit -l  unlimited
 
@@ -147,7 +146,6 @@ Mari kita lihat apa saja perintah yang diberikan di dalam file ``.sh`` di atas:
 - ``#SBATCH --partition`` mengatur seberapa lama sejumlah CPU pada **BATCH COMPUTE NODE** digunakan oleh Anda. Di sini ``short`` memberi Anda jatah 1x24 jam, sementara ``medium-short`` memberi Anda jatah 3x24 jam. Pastikan memilih waktu yang cukup. Jika waktu Anda habis, maka perhitungan Anda akan diberhentikan oleh HPC dan hasil yang tidak tersimpan akan hilang.
 - ``#SBATCH --ntasks`` memberi tahu **BATCH COMPUTE NODE** berapa banyak pekerjaan yang akan dikerjakan dan mengatur alokasi CPU untuk menjalankan semua tugas yang ada. Sebaiknya, perintah ini tidak diganggu.
 - ``#SBATCH --cpus-per-task`` mengatur seberapa banyak CPU yang Anda ingin gunakan per pekerjaan. Dengan nilai bawaan ``#SBATCH --ntasks=1``, perintah ini memberi tahu ``BATCH COMPUTE NODE`` jumlah CPU yang dikerahkan untuk satu-satunya pekerjaan Anda.
-- ``#SBATCH --output`` mengatur file di mana output standar Anda ditulis. Anda tidak dapat melihat Terminal dari ``BATCH COMPUTE NODE``. Sebagai gantinya, apa yang seharusnya ditulis di Terminal dituliskan pada file ini. Secara bawaan, nilai perintah ini adalah ``slurm-%j.out`` di mana ``%j`` digantikan oleh ``JOBID`` (dijelaskan di bawah). Jika Anda tidak ingin ada file yang dibuat, masukkan ``#SBATCH --output=/dev/null``.
 - ``ulimit -l unlimited`` memberi tahu sistem HPC untuk tidak membatasi memori yang dapat Anda gunakan.
 
 Dengan semua perintah di atas, SLURM akan menandai sebagian dari **BATCH COMPUTE NODE** untuk digunakan oleh Anda dan hanya Anda selama periode penggunaan yang Anda minta. Dengan kata lain, Anda tidak akan berbagi CPU dengan pengguna lain dalam perhitungan Anda. 
