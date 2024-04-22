@@ -123,7 +123,7 @@ Dengan **BATCH COMPUTE NODE**, Anda harus meminta "jatah berhitung" kepada siste
 !/bin/bash
 
 #SBATCH --job-name = [Nama pekerjaan Anda sebagai pengenal]
-#SBATCH --partition = [Pilih antara short atau medium-short]
+#SBATCH --partition = [Pilih antara short atau medium-small]
 #SBATCH --ntasks = 1
 #SBATCH --cpus-per-task = [Masukkan jumlah CPU yang ingin Anda gunakan. Pastikan tidak melewati batas (biasanya 64)]
 
@@ -143,7 +143,7 @@ Mari kita lihat apa saja perintah yang diberikan di dalam file ``.sh`` di atas:
 
 - ``!/bin/bash`` memberi tahu **BATCH COMPUTE NODE** untuk menjalankan file ini dengan ``bash``.
 - ``#SBATCH --job-name`` mengatur nama pekerjaan Anda yang nantinya akan muncul dalam antrian. Ini berguna sebagai tanda pengenal dan Anda dapat sebebasnya memberikan nama.
-- ``#SBATCH --partition`` mengatur seberapa lama sejumlah CPU pada **BATCH COMPUTE NODE** digunakan oleh Anda. Di sini ``short`` memberi Anda jatah 1x24 jam, sementara ``medium-short`` memberi Anda jatah 3x24 jam. Pastikan memilih waktu yang cukup. Jika waktu Anda habis, maka perhitungan Anda akan diberhentikan oleh HPC dan hasil yang tidak tersimpan akan hilang.
+- ``#SBATCH --partition`` mengatur seberapa lama sejumlah CPU pada **BATCH COMPUTE NODE** digunakan oleh Anda. Di sini ``short`` memberi Anda jatah 1x24 jam, sementara ``medium-small`` memberi Anda jatah 3x24 jam. Pastikan memilih waktu yang cukup. Jika waktu Anda habis, maka perhitungan Anda akan diberhentikan oleh HPC dan hasil yang tidak tersimpan akan hilang.
 - ``#SBATCH --ntasks`` memberi tahu **BATCH COMPUTE NODE** berapa banyak pekerjaan yang akan dikerjakan dan mengatur alokasi CPU untuk menjalankan semua tugas yang ada. Sebaiknya, perintah ini tidak diganggu.
 - ``#SBATCH --cpus-per-task`` mengatur seberapa banyak CPU yang Anda ingin gunakan per pekerjaan. Dengan nilai bawaan ``#SBATCH --ntasks=1``, perintah ini memberi tahu ``BATCH COMPUTE NODE`` jumlah CPU yang dikerahkan untuk satu-satunya pekerjaan Anda.
 - ``ulimit -l unlimited`` memberi tahu sistem HPC untuk tidak membatasi memori yang dapat Anda gunakan.
