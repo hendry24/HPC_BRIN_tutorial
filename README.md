@@ -347,11 +347,9 @@ lalu tunggu hingga perhitungannya selesai. Berikut tampilan akhir dari direktori
 
 Berikut gambar dan titik datanya:
 
- <div class="row">
-  <div class="column">
+ <div display = "inline">
     <img src = "https://i.ibb.co.com/dkNNw41/Untitled.png" width = "40%">
-  </div>
-  <div class="column">
+ </div>
+   <div display="inline">
     <img src = "https://i.ibb.co.com/ScGV21r/Selection-002.png" width = "40%">
   </div>
-</div> 
