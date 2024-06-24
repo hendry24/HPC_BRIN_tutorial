@@ -341,13 +341,17 @@ lalu tunggu hingga perhitungannya selesai. Berikut tampilan akhir dari direktori
 
 <br>
 <div align="center">
-<img src = "https://i.ibb.co.com/7VGHgmj/Selection-001.png" width = "70%">
+<img src = "https://i.ibb.co.com/7VGHgmj/Selection-001.png" width = "60%">
 </div>
 <br>
 
 Berikut gambar dan titik datanya:
 
-<div align="center">
-<img src = "https://i.ibb.co.com/dkNNw41/Untitled.png" width = "70%">
-<img src = "https://i.ibb.co.com/ScGV21r/Selection-002.png" width = "70%">
-</div>
+ <div class="row">
+  <div class="column">
+    <img src = "https://i.ibb.co.com/dkNNw41/Untitled.png" width = "40%">
+  </div>
+  <div class="column">
+    <img src = "https://i.ibb.co.com/ScGV21r/Selection-002.png" width = "40%">
+  </div>
+</div> 
