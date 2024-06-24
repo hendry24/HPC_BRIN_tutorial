@@ -11,18 +11,20 @@
 BRIN menyediakan layanan menggunakan komputasi performa tinggi (*high performance computing*/HPC) yang dapat Anda akses dari komputer pribadi Anda. Halaman ini dimaksudkan untuk menuntun Anda tentang penggunaan layanan ini secara komprehensif. Harapannya, Anda mengerti dasar-dasar cara kerja HPC dan cara untuk mengoperasikannya sebagai pengguna awam. 
 
 ### **DAFTAR ISI**
-
+<a name="top"></a>
 - [**Bagaimana Saya Dapat Mengakses HPC?**](#section1)
 - [**Komunikasi Anda dan Sistem HPC**](#section2)
-- [Bekerja dengan Interactive Compute Node ](#section3)
+- [**Bekerja dengan Interactive Compute Node**](#section3)
 - [**Bekerja dengan Batch Compute Node**](#section4)
 - [**Menjalankan Kode ``Python``**](#section5)
     - [Apakah _package_ ``Python`` yang ingin saya gunakan tersedia?](#section5.1)
-    - [Demonstrasi singkat: gerak lurus berubah beraturan](#section5.2)
+    - [Demonstrasi singkat: gerak harmonik sederhana](#section5.2)
 
 ---
 
 ## **Bagaimana Saya Dapat Mengakses HPC?**<a name="section1"></a>
+
+######[(Kembali ke daftar isi)](#top)
 
 Langkah pertama yang harus Anda lakukan adalah mendaftarkan diri sebagai pengguna layanan HPC melalui laman ELSA BRIN. Panduan lengkapnya dapat Anda temukan di [**SINI**](https://elsa.brin.go.id/faq).
 
@@ -66,6 +68,8 @@ Ini menunjukkan bahwa Anda sudah berhasil menyambungkan komputer Anda ke sistem 
 
 ## **Komunikasi Anda dan Sistem HPC**<a name="section2"></a>
 
+######[(Kembali ke daftar isi)](#top)
+
 Mulai dari sini kita asumsikan Terminal yang Anda gunakan menggunakan [**Bash**](https://en.wikipedia.org/wiki/Bash_(Unix_shell)) (contoh: [**Ubuntu**](https://ubuntu.com/download)). Secara umum, skema hubungan komputer Anda dan komputer pada sistem HPC BRIN adalah sebagai berikut.
 
 <br>
@@ -90,7 +94,9 @@ Ada dua cara untuk melakukan perhitungan pada HPC.
 
 ---
 
-## Bekerja dengan Interactive Compute Node <a name="section3"></a>
+## **Bekerja dengan Interactive Compute Node** <a name="section3"></a>
+
+######[(Kembali ke daftar isi)](#top)
 
 Dalam moda **INTERACTIVE**, Anda membawa Terminal Anda lebih jauh ke dalam sistem HPC dan mengendalikan **INTERACTIVE COMPUTE NODE** melalui Terminal Anda. Anggaplah Anda mengendalikan sebuah komputer perhitungan dari jauh, dengan komputer **LOGIN NODE**, yang juga Anda kendalikan dari jauh.
 
@@ -117,6 +123,8 @@ Jika perintah ``exit`` diberikan di sini, sambungan Anda akan terputus dari **IN
 ---
 
 ## **Bekerja dengan Batch Compute Node**<a name="section4"></a>
+
+######[(Kembali ke daftar isi)](#top)
 
 Jika perhitungan Anda memakan banyak waktu dan Anda ingin menjalankan semuanya dengan satu perintah, lalu menutup Terminal dan melakukan hal lain, maka **BATCH COMPUTE NODE** sangat berguna bagi Anda. Berbeda dengan moda **INTERACTIVE**, dengan moda **BATCH** Anda hanya mengirimkan tugas dari **LOGIN NODE** kepada **BATCH COMPUTE NODE** untuk dikerjakan. Komputer perhitungan jenis ini tidak peduli dengan apa yang Anda lakukan di **LOGIN NODE**, jadi Anda dapat menutup sambungan Anda ke **LOGIN NODE** tanpa menganggu perhitungan.
 
@@ -199,6 +207,8 @@ Perintah lainnya yang disediakan SLURM dapat anda baca di [**SINI**](https://slu
 </div>
 
 ## **Menjalankan Kode ``Python``**<a name="section5"></a>
+
+######[(Kembali ke daftar isi)](#top)
 
 Untuk menjalankan kode ``Python`` pada sistem HPC BRIN, kita perlu memuat beberapa modul terlebih dahulu. _Interpreter_ dari ``Python`` disediakan oleh modul ``Anaconda`` yang dapat kita panggil dengan menulis
 ```
