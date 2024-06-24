@@ -12,10 +12,13 @@ BRIN menyediakan layanan menggunakan komputasi performa tinggi (*high performanc
 
 ### **DAFTAR ISI**
 
-- [Bagaimana Saya Dapat Mengakses HPC?](#section1)
-- [Komunikasi Anda dan Sistem HPC](#section2)
-- [Bekerja dengan Interactive Compute Node](#section3)
-- [Bekerja dengan Batch Compute Node](#section4)
+- [**Bagaimana Saya Dapat Mengakses HPC?**](#section1)
+- [**Komunikasi Anda dan Sistem HPC**](#section2)
+- [Bekerja dengan Interactive Compute Node ](#section3)
+- [**Bekerja dengan Batch Compute Node**](#section4)
+- [**Menjalankan Kode ``Python``**](#section5)
+    - [Apakah _package_ ``Python`` yang ingin saya gunakan tersedia?](#section5.1)
+    - [Demonstrasi singkat: gerak lurus berubah beraturan](#section5.2)
 
 ---
 
@@ -122,16 +125,18 @@ Dengan **BATCH COMPUTE NODE**, Anda harus meminta "jatah berhitung" kepada siste
 ```
 !/bin/bash
 
-#SBATCH --job-name = [Nama pekerjaan Anda sebagai pengenal]
-#SBATCH --partition = [Pilih antara short atau medium-small]
-#SBATCH --ntasks = 1
-#SBATCH --cpus-per-task = [Masukkan jumlah CPU yang ingin Anda gunakan. Pastikan tidak melewati batas (biasanya 64)]
+#SBATCH --job-name=[Nama pekerjaan Anda sebagai pengenal]
+#SBATCH --partition=[Pilih antara short atau medium-small]
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=[Masukkan jumlah CPU yang ingin Anda gunakan. Pastikan tidak melewati batas (biasanya 64)]
 
 ulimit -l  unlimited
 
 [Masukkan rangkaian perintah untuk pekerjaan Anda di sini]
 
 ```
+
+(Perhatikan bahwa opsi-opsi pada perintah ``SBATCH`` ditulis tanpa spasi.)
 
 Simpan file ini dengan ekstensi ``.sh``. Kemudian, Anda dapat mengajukan pekerjaan Anda dengan menjalankan perintah
 
@@ -191,4 +196,148 @@ sacct
 
 Perintah lainnya yang disediakan SLURM dapat anda baca di [**SINI**](https://slurm.schedmd.com/quickstart.html).
 
+</div>
+
+## **Menjalankan Kode ``Python``**<a name="section5"></a>
+
+Untuk menjalankan kode ``Python`` pada sistem HPC BRIN, kita perlu memuat beberapa modul terlebih dahulu. _Interpreter_ dari ``Python`` disediakan oleh modul ``Anaconda`` yang dapat kita panggil dengan menulis
+```
+module load gnu12
+module load gcc
+module load Anaconda
+```
+pada bagian perintah file ``.sh`` yang kita punya di bagian sebelumnya (untuk **BATCH COMPUTE NODE**) atau pada terminal **INTERACTIVE COMPUTE NODE**. Modul ``gnu12`` dan ``gcc`` diperlukan oleh interpreter ``Python`` dari ``Anaconda`` untuk melakukan kompilasi kode sebelum dijalankan, jadi ketiganya harus dimuat. 
+
+Selanjutnya, Anda tinggal memanggil file ``Python`` yang ingin Anda jalankan seperti menjalankannya di terminal sendiri. Tuliskan
+```
+python3 -u [nama_file_python_anda].py
+```
+tanpa kurung kotak. Pilihan ``-u`` mengatur ``Python`` agar berjalan dalam moda _unbuffered_, yang diperlukan agar output standarnya (misalnya perintah ``print``) bisa dituliskan ke dalam file _logging_ dari SLURM (biasanya ``slurm-[job_ID_anda].out``). Jika Anda menggunakan **INTERACTIVE COMPUTE NODE**, perintah ``-u`` dapat Anda buang. 
+
+#### Apakah _package_ ``Python`` yang ingin saya gunakan tersedia?<a name="section5.1"></a>
+
+Anda dapat melihat _package_ bawaan dari ``Anaconda`` pada sistem HPC BRIN dengan perintah
+```
+ls /mgpfs/shared/apps/app/Anaconda/3-2023.9-0/lib/python3.11/site-packages/
+```
+
+Pada umumnya, _package_ yang ingin Anda gunakan mungkin tidak disediakan secara bawaan oleh sistem HPC ketika Anda memanggil ``module load Anaconda``. Dalam kasus awam, _package_ Anda dapat ditemukan di [PyPi](pypi.org) sehingga Anda dapat menggunakan ``pip`` untuk memasang modul Anda dengan perintah 
+```
+pip install [nama_package]
+``` 
+tanpa kurung kotak, di **LOGIN NODE**. Jalankan perintah ini seteleh ``module load Anaconda``. 
+
+Anda hanya perlu melakukan ini **satu kali** (kecuali ingin _update_ versi) untuk akun HPC Anda&mdash;_package_ yang Anda install akan tersimpan atas nama akun Anda dan dapat digunakan baik oleh **INTERACTIVE COMPUTE NODE** maupun **BATCH COMPUTE MODE**. 
+
+Beberapa _package_ juga tersedia sebagai modul pada sistem HPC yang dapat Anda muat. Misalnya, Anda dapat memuat ``qutip`` dengan menulis ``module load quantum/qutip`` pada terminal **INTERACTIVE COMPUTE NODE** maupun pada file ``.sh`` untuk **BATCH COMPUTE MODE**. 
+
+Sayangnya, dengan pilihan ini Anda harus memuat modul setiap kali memulai sebuah _job_, dan belum tentu _package_-nya merupakan versi yang Anda mau. Oleh karena itu, kami menyarankan Anda untuk melakukan pemasangan modul pribadi. 
+
+#### Apakah saya dapat menggunakan JupyterLab atau Jupyter Notebook dengan SLURM?
+
+Fitur ini belum didukung oleh sistem HPC BRIN.. 
+
+#### Demonstrasi singkat: getaran harmonik sederhana
+
+Agar lebih inklusif, kami memberikan demonstrasi dengan fisika SMA. Kami akan menggunakan _package_ ``scipy`` yang tersedia secara bawaan, tapi kami akan melakukan instalasi akun pribadi di sini. _Package_ ini memiliki fitur penyelesaian persamaan diferensial biasa yang dapat kita gunakan untuk menyelesaikan permasalahan kita. Persamaan gerak sistem diberikan sebagai berikut:
+$$
+\ddot{x}+\omega^2x=0
+$$
+Syarat awal kita berikan $x_0=10$ dan $\dot{x}=0$. Kita ingin luarannya berupa gambar dalam format ``.png`` dan titik data dalam format ``.txt``. 
+
+Kita akan menggunakan **BATCH COMPUTE NODE** dan tidak akan menggunakan **INTERACTIVE COMPUTE NODE** karena sama seperti menjalankan program biasanya. 
+
+Andaikan saja kita belum punya _package_ ``scipy`` untuk digunakan. Kita bisa buka terminal kita di **LOGIN NODE** lalu menulis
+```
+module load Anaconda
+pip install scipy
+```
+Setelah instalasi selesai, ``scipy`` sudah tersimpan di akun kita dan tidak perlu lagi diinstalasi, kecuali untuk keperluan _update_. 
+
+Kita akan membuat dua file: file ``.sh`` untuk SLURM, dan file ``.py`` yang ingin kita jalankan. File ``.sh`` kita buat sesuai penjelasan di atas:
+
+```
+!/bin/bash
+
+#SBATCH --job-name=demo_1_getaran_harmonik_sederhana
+#SBATCH --partition=short
+#SBATCH --ntasks=1
+#SBATCH --cpus-per-task=8
+
+ulimit -l  unlimited
+
+moduel load gnu12
+module load gcc
+module load Anaconda
+
+python3 -u ./run.py
+```
+
+Kita namakan file ini ``run.sh``. Di sini kita menamai nama file ``Python`` yang ingin kita jalankan ``./run.py``. Pastikan nama yang dituliskan dalam file ``.sh`` adalah nama dari file yang ingin Anda jalankan. Tulisan ``./`` di awal menunjukkan posisi relatif dari file ``.py`` terhadap file ``.sh``, yakni di folder yang sama. Jika file ``.py`` Anda terletak di tempat lain, berikan lokasi secara tepat. Anda dapat juga menggunakan posisi absolut. 
+
+Karena ``scipy`` sudah terpasang untuk akun kita, kita tinggal menulis file ``.py``-nya seperti biasa:
+```
+import numpy as np 
+import scipy as sp
+import matplotlib.pyplot as plt     # untuk plot gambar
+
+# Keadaan awal
+x0 = 10
+v0 = 0
+
+# Kita memilih [omega=pi] dan mengambil solusi 
+# untuk 10 satuan waktu pertama. 
+
+omega = np.pi
+
+t = np.linspace(0, 10, 1001)
+
+def solve_eq(t, x):
+    # Misalkan:
+    #   x[0] adalah posisi 
+    #   x[1] = dx[0]/dt adalah kecepatan
+
+    return [x[1],               # dx[0]/dt
+            -omega**2 * x[0]]   # dx[1]/dt
+
+res = sp.integrate.solve_ivp(solve_eq,
+                            t_span = [0, t[-1]],
+                            y0 = [x0, v0],
+                            dense_output = True)
+
+x = res.sol(t)[0]
+# scipy memberikan solusi untuk x dan v, kita ambil 
+# yang pertama saja. 
+
+# Buat gambar
+
+plt.plot(t, x)
+plt.savefig("out.png")
+
+# Buat file data
+
+to_write = np.array([[t[i], x[i]] 
+                    for i in range(len(t))])
+with open("out.txt", "w") as f:
+    np.savetxt(f, to_write)
+```
+**Tidak ada** perlakuan tambahan yang diperlukan pada file ``.py`` jika kita ingin menjalankannya menggunakan **BATCH COMPUTE MODE**. Tulis saja seperti biasa. 
+
+Setelah memastikan kode tidak lagi mengalami bug, kita dapat mengirimkan _job_ kepada SLURM:
+```
+sbatch run.sh 
+```
+lalu tunggu hingga perhitungannya selesai. Berikut tampilan akhir dari direktori kita:
+
+<br>
+<div align="center">
+<img src = "https://i.ibb.co.com/7VGHgmj/Selection-001.png" width = "70%">
+</div>
+<br>
+
+Berikut gambar dan titik datanya:
+
+<div align="center">
+<img src = "https://i.ibb.co.com/dkNNw41/Untitled.png" width = "70%">
+<img src = "https://i.ibb.co.com/ScGV21r/Selection-002.png" width = "70%">
 </div>
