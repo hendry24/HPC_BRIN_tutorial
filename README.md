@@ -224,7 +224,7 @@ python3 -u [nama_file_python_anda].py
 ```
 tanpa kurung kotak. Pilihan ``-u`` mengatur ``Python`` agar berjalan dalam moda _unbuffered_, yang diperlukan agar output standarnya (misalnya perintah ``print``) bisa dituliskan ke dalam file _logging_ dari SLURM (biasanya ``slurm-[job_ID_anda].out``). Jika Anda menggunakan **INTERACTIVE COMPUTE NODE**, perintah ``-u`` dapat Anda buang. 
 
-### Apakah _package_ ``Python`` yang ingin saya gunakan tersedia?<a name="section5.1"></a>
+### > Apakah _package_ ``Python`` yang ingin saya gunakan tersedia?<a name="section5.1"></a>
 
 Anda dapat melihat _package_ bawaan dari ``Anaconda`` pada sistem HPC BRIN dengan perintah
 ```
@@ -243,11 +243,11 @@ Beberapa _package_ juga tersedia sebagai modul pada sistem HPC yang dapat Anda m
 
 Sayangnya, dengan pilihan ini Anda harus memuat modul setiap kali memulai sebuah _job_, dan belum tentu _package_-nya merupakan versi yang Anda mau. Oleh karena itu, kami menyarankan Anda untuk melakukan pemasangan modul pribadi. 
 
-### Apakah saya dapat menggunakan JupyterLab atau Jupyter Notebook dengan SLURM?
+### > Apakah saya dapat menggunakan JupyterLab atau Jupyter Notebook dengan SLURM?
 
 Fitur ini belum didukung oleh sistem HPC BRIN. Jadi, Anda harus menggunakan file ``.py`` untuk menjalankan program ``Python``.
 
-### Demonstrasi singkat: getaran harmonik sederhana
+### > Demonstrasi singkat: getaran harmonik sederhana
 
 Agar lebih inklusif, kami memberikan demonstrasi dengan fisika SMA. Kami akan menggunakan _package_ ``scipy`` yang tersedia secara bawaan, tapi kami akan melakukan instalasi akun pribadi di sini. _Package_ ini memiliki fitur penyelesaian persamaan diferensial biasa yang dapat kita gunakan untuk menyelesaikan permasalahan kita. Persamaan gerak sistem diberikan sebagai berikut:
 ```math
