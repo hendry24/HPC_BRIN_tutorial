@@ -341,7 +341,7 @@ lalu tunggu hingga perhitungannya selesai. Berikut tampilan akhir dari direktori
 
 <br>
 <div align="center">
-<img src = "https://i.ibb.co.com/7VGHgmj/Selection-001.png" width = "60%">
+<img src = "https://i.ibb.co.com/7zL8L5t/Selection-001.png" width = "60%">
 </div>
 <br>
 
