@@ -250,9 +250,9 @@ Fitur ini belum didukung oleh sistem HPC BRIN. Jadi, Anda harus menggunakan file
 ### Demonstrasi singkat: getaran harmonik sederhana
 
 Agar lebih inklusif, kami memberikan demonstrasi dengan fisika SMA. Kami akan menggunakan _package_ ``scipy`` yang tersedia secara bawaan, tapi kami akan melakukan instalasi akun pribadi di sini. _Package_ ini memiliki fitur penyelesaian persamaan diferensial biasa yang dapat kita gunakan untuk menyelesaikan permasalahan kita. Persamaan gerak sistem diberikan sebagai berikut:
-$$
+```math
 \ddot{x}+\omega^2x=0
-$$
+```
 Syarat awal kita berikan $x_0=10$ dan $\dot{x}=0$. Kita ingin luarannya berupa gambar dalam format ``.png`` dan titik data dalam format ``.txt``. 
 
 Kita akan menggunakan **BATCH COMPUTE NODE** dan tidak akan menggunakan **INTERACTIVE COMPUTE NODE** karena sama seperti menjalankan program biasanya. 
