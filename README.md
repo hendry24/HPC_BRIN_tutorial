@@ -237,9 +237,9 @@ pip install [nama_package]
 ``` 
 tanpa kurung kotak, di **LOGIN NODE**. Jalankan perintah ini seteleh ``module load Anaconda``. 
 
-Anda hanya perlu melakukan ini **satu kali** (kecuali ingin _update_ versi) untuk akun HPC Anda&mdash;_package_ yang Anda install akan tersimpan atas nama akun Anda dan dapat digunakan baik oleh **INTERACTIVE COMPUTE NODE** maupun **BATCH COMPUTE MODE**. 
+Anda hanya perlu melakukan ini **satu kali** (kecuali ingin _update_ versi) untuk akun HPC Anda&mdash;_package_ yang Anda install akan tersimpan atas nama akun Anda dan dapat digunakan baik oleh **INTERACTIVE COMPUTE NODE** maupun **BATCH COMPUTE NODE**. 
 
-Beberapa _package_ juga tersedia sebagai modul pada sistem HPC yang dapat Anda muat. Misalnya, Anda dapat memuat ``qutip`` dengan menulis ``module load quantum/qutip`` pada terminal **INTERACTIVE COMPUTE NODE** maupun pada file ``.sh`` untuk **BATCH COMPUTE MODE**. 
+Beberapa _package_ juga tersedia sebagai modul pada sistem HPC yang dapat Anda muat. Misalnya, Anda dapat memuat ``qutip`` dengan menulis ``module load quantum/qutip`` pada terminal **INTERACTIVE COMPUTE NODE** maupun pada file ``.sh`` untuk **BATCH COMPUTE NODE**. 
 
 Sayangnya, dengan pilihan ini Anda harus memuat modul setiap kali memulai sebuah _job_, dan belum tentu _package_-nya merupakan versi yang Anda mau. Oleh karena itu, kami menyarankan Anda untuk melakukan pemasangan modul pribadi. 
 
@@ -331,7 +331,7 @@ to_write = np.array([[t[i], x[i]]
 with open("out.txt", "w") as f:
     np.savetxt(f, to_write)
 ```
-**Tidak ada** perlakuan tambahan yang diperlukan pada file ``.py`` jika kita ingin menjalankannya menggunakan **BATCH COMPUTE MODE**. Tulis saja seperti biasa. 
+**Tidak ada** perlakuan tambahan yang diperlukan pada file ``.py`` jika kita ingin menjalankannya menggunakan **BATCH COMPUTE NODE**. Tulis saja seperti biasa. 
 
 Setelah memastikan kode tidak lagi mengalami bug, kita dapat mengirimkan _job_ kepada SLURM:
 ```
