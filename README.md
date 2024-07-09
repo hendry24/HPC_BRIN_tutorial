@@ -391,7 +391,7 @@ Berikut gambar dan titik datanya:
 Penggunaan VS Code pada dasarnya diggunakan untuk menjalankan kode program secara langsung dengan kemudahan aksesnya untuk _click running on file_. Tetapi pada sistem HPC ini, VS Code **`hanya boleh difungsikan`** sebagai ekstensi yang dapat berguna untuk mempermudah membaca, mengedit, meletakkan, dan memindahkan dokumen program yang dimiliki. Berikut ini adalah beberapa larangan yang harus diperhatikan oleh pengguna dalam menggunakan VS Code di HPC :
 
 1. Dilarang menjalankan program secara langsung dengan tombol play di sebelah kanan atas atau tombol run di sebelah kiri atas; dan
-2. Dilarang menjalankan program dalam dokumen .ipynb secara langsung tanpa menjalankan perintah [srun](#bekerja-dengan-interactive-compute-node) terlebih dahulu.
+2. Dilarang menjalankan program dalam dokumen .ipynb secara langsung tanpa menjalankan perintah [srun](#section3) terlebih dahulu.
 
 > **_NOTE :_** Perlu diperhatikan bahwa kernel dan compiler yang digunakan jika me-_running_ dokumen secara langsung akan dijalankan pada **LOGIN NODE** sehingga secara otomatis akan memberatkan beban kerja **LOGIN NODE**.
 
