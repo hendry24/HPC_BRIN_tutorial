@@ -6,16 +6,6 @@ relative_links:
   enabled: true
   collections: true
 include:
-  - site.html
-
-lsi: false
-safe: true
-incremental: false
-highlighter: rouge
-gist:
-  noscript: false
-kramdown:
-  math_engine: mathjax
-  syntax_highlighter: rouge
+  - index.html
 
   
